@@ -258,7 +258,7 @@ kiwony@kiwonymac.com:/Users/kiwony/temp/SimpleRestAPI> curl --header "Content-Ty
                 "execute-api:Invoke",
                 "execute-api:ManageConnections"
             ],
-            "Resource": "arn:aws:execute-api:ap-northeast-2:165277457066:fb4ku2teo2"
+            "Resource": "arn:aws:execute-api:ap-northeast-2:165277451234:fb4abcdeo2"
         }
     ]
 }
