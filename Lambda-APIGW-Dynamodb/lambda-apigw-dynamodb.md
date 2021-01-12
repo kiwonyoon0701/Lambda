@@ -180,7 +180,7 @@ kiwony@kiwonymac.com:/Users/kiwony/temp/SimpleRestAPI> curl --header "Content-Ty
 {"statusCode":200,"Version":"20210112","headers":{},"body":"{\"Items\":[{\"city\":\"tokyo\",\"mobile\":\"010-2222-2222\",\"id\":3,\"name\":\"john\"},{\"city\":\"seoul\",\"mobile\":\"010-1111-1111\",\"id\":2,\"name\":\"jane\"},{\"city\":\"seoul\",\"mobile\":\"010-0000-0000\",\"id\":1,\"name\":\"kiwony\"}],\"Count\":3,\"ScannedCount\":3}"}%
 ```
 
-**Test after deploying API with API key configuration**
+**Test after deploying API without API key configuration**
 
 ```
 kiwony@kiwonymac.com:/Users/kiwony/temp/SimpleRestAPI> curl --header "Content-Type: application/json" --request GET --data '{"httpMethod":"GET"}' https://abcdefghi.execute-api.ap-northeast-2.amazonaws.com/dev/dynamodb-users
@@ -195,8 +195,6 @@ kiwony@kiwonymac.com:/Users/kiwony/temp/SimpleRestAPI> curl --header "Content-Ty
    2. API key : Auto Generate
 3. Save
 4. API key : SHOW click
-
-UDu3ZyYzZ767NN9ER1uLq12345678
 
 ## Create Usage Plans
 
