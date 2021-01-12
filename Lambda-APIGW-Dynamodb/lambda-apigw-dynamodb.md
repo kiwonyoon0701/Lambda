@@ -89,12 +89,14 @@
 
 ## Create nodejs project and install required packages
 
+```
 kiwony@kiwonymac.com:/Users/kiwony/temp> mkdir SimpleRestAPI
 kiwony@kiwonymac.com:/Users/kiwony/temp/SimpleRestAPI> npm init
 kiwony@kiwonymac.com:/Users/kiwony/temp/SimpleRestAPI> npm install aws-sdk
 kiwony@kiwonymac.com:/Users/kiwony/temp/SimpleRestAPI> npm install dynamodb-doc
 kiwony@kiwonymac.com:/Users/kiwony/temp/SimpleRestAPI> vi index.js
 kiwony@kiwonymac.com:/Users/kiwony/temp/SimpleRestAPI> cat index.js
+```
 
 ```
 const doc = require('dynamodb-doc');
