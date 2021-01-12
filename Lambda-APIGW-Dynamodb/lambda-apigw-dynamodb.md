@@ -219,9 +219,55 @@ UDu3ZyYzZ767NN9ER1uLq12345678
 
 ## API Test using API Key(x-api-key)
 
-````
+```
 kiwony@kiwonymac.com:/Users/kiwony/temp/SimpleRestAPI> curl --header "Content-Type: application/json" -H 'X-Api-Key:UDu3ZyYzZ767NN9ER1uLq12345678'  --request GET --data '{"httpMethod":"GET"}' https://abcdefghi.execute-api.ap-northeast-2.amazonaws.com/dev/dynamodb-users
 {"statusCode":200,"Version":"20210112","headers":{},"body":"{\"Items\":[{\"city\":\"tokyo\",\"mobile\":\"010-2222-2222\",\"id\":3,\"name\":\"john\"},{\"city\":\"seoul\",\"mobile\":\"010-1111-1111\",\"id\":2,\"name\":\"jane\"},{\"city\":\"seoul\",\"mobile\":\"010-0000-0000\",\"id\":1,\"name\":\"kiwony\"}],\"Count\":3,\"ScannedCount\":3}"}%
 ```
 
-````
+## API Test using AWS_IAM
+
+1. Create Lambda Function - SimpleRestAPI2
+2. Create new API Gateway - SimpleRestAPI2
+   1. Create Resources : /base
+      1. Create Method : GET
+3. Connect Lambda with API Gateway
+4. Deploy API into Stage
+5. Test using Postman - Working
+
+<kbd> ![GitHub Logo](images/1.png) </kbd>
+
+6. /base - GET - Method Execution
+
+   1. Method Request
+      1. Authorization : AWS_IAM
+
+7. services -> API GW -> /base resource
+8. Deploy API into Stage2
+9. Test using Postman on Stage2 - Failed
+
+<kbd> ![GitHub Logo](images/2.png) </kbd>
+
+10. Create IAM User who has permission to invoke API in APIGW
+11. Create New IAM Policy - SimpleRestAPI2-Policy
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "execute-api:Invoke",
+                "execute-api:ManageConnections"
+            ],
+            "Resource": "arn:aws:execute-api:ap-northeast-2:165277457066:fb4ku2teo2"
+        }
+    ]
+}
+```
+
+12. Create New IAM User(User01) who has policy -SimpleRestAPI2-Policy and check access / secret key
+
+13. Test using Postman on Stage2 - Working
+
+<kbd> ![GitHub Logo](images/3.png) </kbd>
