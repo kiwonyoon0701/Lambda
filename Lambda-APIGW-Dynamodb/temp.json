@@ -1,6 +1,0 @@
-{
-  "statusCode": 200,
-  "Version": "20210102-v1",
-  "headers": {},
-  "body": "{\"Items\":[{\"id\":2,\"name\":\"bob\",\"mobile\":\"010-2020-2020\"},{\"id\":1,\"name\":\"kiwony\",\"mobile\":\"010-1010-1010\"}],\"Count\":2,\"ScannedCount\":2}"
-}
