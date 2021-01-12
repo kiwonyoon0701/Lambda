@@ -217,7 +217,7 @@ UDu3ZyYzZ767NN9ER1uLq12345678
          2. ✅ Click
 4. Done
 
-## API Final Test using x-api-key
+## API Test using API Key(x-api-key)
 
 ````
 kiwony@kiwonymac.com:/Users/kiwony/temp/SimpleRestAPI> curl --header "Content-Type: application/json" -H 'X-Api-Key:UDu3ZyYzZ767NN9ER1uLq12345678'  --request GET --data '{"httpMethod":"GET"}' https://abcdefghi.execute-api.ap-northeast-2.amazonaws.com/dev/dynamodb-users
