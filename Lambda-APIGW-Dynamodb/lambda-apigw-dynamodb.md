@@ -173,14 +173,14 @@ kiwony@kiwonymac.com:/Users/kiwony> curl --header "Content-Type: application/jso
 1. services -> API GW -> APIS:SimpleRestAPI -> Resources -> dynamodb-users -> abcdefghiGET -> Method Execution
 2. Settings -> API Key Required : true
 
-**TEST**
+**TEST without deploy API**
 
 ```
 kiwony@kiwonymac.com:/Users/kiwony/temp/SimpleRestAPI> curl --header "Content-Type: application/json" --request GET --data '{"httpMethod":"GET"}' https://abcdefghi.execute-api.ap-northeast-2.amazonaws.com/dev/dynamodb-users
 {"statusCode":200,"Version":"20210112","headers":{},"body":"{\"Items\":[{\"city\":\"tokyo\",\"mobile\":\"010-2222-2222\",\"id\":3,\"name\":\"john\"},{\"city\":\"seoul\",\"mobile\":\"010-1111-1111\",\"id\":2,\"name\":\"jane\"},{\"city\":\"seoul\",\"mobile\":\"010-0000-0000\",\"id\":1,\"name\":\"kiwony\"}],\"Count\":3,\"ScannedCount\":3}"}%
 ```
 
-**deploy API and Test**
+**Test after deploying API with API key configuration**
 
 ```
 kiwony@kiwonymac.com:/Users/kiwony/temp/SimpleRestAPI> curl --header "Content-Type: application/json" --request GET --data '{"httpMethod":"GET"}' https://abcdefghi.execute-api.ap-northeast-2.amazonaws.com/dev/dynamodb-users
